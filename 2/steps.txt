@@ -1,0 +1,36 @@
+To create App Credentials
+
+1. Open the Consent Screen page and select your project in the drop-down menu at the top of the page.
+2. Select the User Type and click CREATE.
+3. Fill out the consent screen form. You can edit this later if needed. Click SAVE AND CONTINUE when done.
+4. On the next page, click ADD OR REMOVE SCOPES.
+5. Scroll down and enter the following in the field under Manually add scopes:
+    https://www.googleapis.com/auth/calendar.readonly
+
+6. Click ADD TO TABLE.
+7. Add any other scopes your project might need, then click UPDATE.
+8. Click SAVE AND CONTINUE.
+
+
+To create your application's API key:
+
+1. Go to the API Console.
+2. From the projects list, select a project or create a new one.
+3. If the APIs & services page isn't already open, open the left side menu and select APIs & services.
+4. On the left, choose Credentials.
+5. Click Create credentials and then select API key.
+
+(*) using the generated client credentials can be able to get busy intervals
+    1. Import collection 'GoogleApis.postman_collection.json' to postman.
+    2. Add CLIENT_ID, CLIENT_SECRET & API_KEY to the postman vault (because of sensitivity of data)
+    3. Add AUTH_URL, TOKEN_URL, SCOPES, REDIRECT_URL to environment variables in post Manually
+    4. Go to Authorization tab of request "FreeBusyInterval" and select AUth type 2.0
+    5. Click on Generate New Access Token
+    6. It will open a browser link to authorize user and it will ask  permission to open postman from user.
+    7. click open postman
+    8. Click on Proceed button
+    9. Click on use Token
+    10. Now can make request to api endpoint.
+
+
+(*) using the api key can get busy intervals by executing index.js

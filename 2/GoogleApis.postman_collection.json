@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "1fd5ed6e-96d2-4711-b9b5-0e8d53367274",
+		"name": "GoogleApis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36714784"
+	},
+	"item": [
+		{
+			"name": "FreeBusyInterval",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "{{SCOPES}}",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{vault:CLIENT_SECRET}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{vault:CLIENT_ID}}",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "{{TOKEN_URL}}",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "{{AUTH_URL}}",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Google Calendar API",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "{{REDIRECT_URL}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"timeMin\": \"2024-07-01T00:00:00Z\",\r\n    \"timeMax\": \"2024-07-31T00:00:00Z\",\r\n    \"items\": [\r\n        {\r\n            \"id\": \"e00e525ba6916915664be6e951950b7aa09ba533a6182250a13b5655cc607d1a@group.calendar.google.com\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.googleapis.com/calendar/v3/freeBusy",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"calendar",
+						"v3",
+						"freeBusy"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
