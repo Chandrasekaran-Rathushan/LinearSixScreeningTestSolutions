@@ -32,5 +32,18 @@ To create your application's API key:
     9. Click on use Token
     10. Now can make request to api endpoint.
 
+    API Endpoint => https://www.googleapis.com/calendar/v3/freeBusy
+    API Request Body => 
+                        {
+                            "timeMin": "2024-07-01T00:00:00Z",
+                            "timeMax": "2024-07-31T00:00:00Z",
+                            "items": 
+                            [
+                                {
+                                    "id": "e00e525ba6916915664be6e951950b7aa09ba533a6182250a13b5655cc607d1a@group.calendar.google.com"
+                                }
+                            ]
+                        }
+
 
 (*) using the api key can get busy intervals by executing index.js
